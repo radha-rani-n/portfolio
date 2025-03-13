@@ -2,17 +2,22 @@
 import RadhaPhoto from "../assets/Radha-photo.jpg"
 ---
 <section class="max-w-[1280px] mx-auto p-8 mt-16 flex flex-col items-center justify-center gap-16">
-    <div>
+    <div class="flex flex-col items-center justify-center">
     <h2 class="text-3xl">About Me</h2>
-    <p>My introduction</p>
+    <p class="text-[var(--text-color)]">My introduction</p>
 </div>
-<div class="flex items-center justify-center gap-16">
-    <img src={RadhaPhoto.src} alt="" class="w-80 h-60 object-cover rounded-xl">
-    <div>
-        <p>Supply chain analyst turned Software Engineer </p>
-        <p>Supply chain analyst turned Software Engineer </p>
-        <p>Supply chain analyst turned Software Engineer </p>
-        <p>Supply chain analyst turned Software Engineer </p>
+<div class="w-[80%]  flex items-center justify-center gap-24">
+    <div class="w-400 h-60 overflow-hidden"> <img src={RadhaPhoto.src} alt="" class="w-100 h-60 object-cover rounded-xl"/> </div>
+   
+    <div class="flex flex-col gap-4">
+        <p class="flex-wrap text-xl">Software Engineer with Bachelors in Civil Engineering . Two years of experience as a Supply Chain Analyst . Transitioned into software engineer . To support this transition, I have graduated from Software Engineering bootcamp at BrainStation, where I gained hands-on experience in full-stack development. </p>
+        <div class="flex gap-32">
+      <div class="flex items-center flex-col">
+        <p class="text-center font-bold text-3xl"><span>02+</span></p>
+        <p>Years experience</p>
+      </div>
+     <button class="bg-[var(--first-color-alt)] px-4 py-3 rounded-md text-white w-fit cursor-pointer">Download CV <i class="uil uil-download-alt"></i></button>
+      </div>
     </div>
 </div>
 </section>
