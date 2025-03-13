@@ -1,9 +1,9 @@
 const Skill = ({ src, skillName }) => {
   return (
-    <div class="w-fit px-8 py-4 rounded-md border-black border-[1px] bg-white flex flex-col items-center gap-2">
+    <div className="w-30 h-30 px-8 py-4 rounded-md border-[var(--first-color)] border-[1px] bg-white flex flex-col items-center gap-2 shadow-[inset_0_0_10px_hsl(250,92%,85%)]">
       {" "}
-      <img src={src} alt="" class="w-12" />
-      <p>{skillName}</p>
+      <img src={src.src} alt="" className="w-12" />
+      <p className="font-semibold">{skillName}</p>
     </div>
   );
 };

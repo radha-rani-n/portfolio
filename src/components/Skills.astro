@@ -17,28 +17,66 @@ import Typescript from "../assets/typescript.svg"
 import Astro from "../assets/astro.svg"
 import Skill from "../components/Skill"
 
+const skills=[
+    {
+        name:"Html", src:Html,
+    },
+    {
+        name:"Css", src:Css,
+    },
+    {
+        name:"React", src:React,
+    },
+    {
+        name:"Sass", src:Sass,
+    },
+    {
+        name:"Typescript", src:Typescript,
+    },
+    {
+        name:"Tailwind", src:Tailwind,
+    },
+    {
+        name:"Knex", src:Knex,
+    },
+    {
+        name:"Mysql", src:Mysql,
+    },
+    {
+        name:"Express", src:Express,
+    },
+    {
+        name:"Node", src:Node,
+    },
+    {
+        name:"Mui", src:Mui,
+    },
+    {
+        name:"Antd", src:Antd,
+    },
+    {
+        name:"Git", src:Git,
+    },
+    {
+        name:"Github", src:Github,
+    }
+    ,
+    {
+        name:"Astro", src:Astro,
+    }
+  
+]
+
 ---
-<section class="max-w-[1280px] mx-auto">
+<section class="max-w-[1280px] mx-auto p-8 flex flex-col items-center justify-center gap-16 my-16">
     <h2 class="text-4xl font-bold">Skills</h2>
-    <Skill src={Css.src} skillName="Css" client:load/>
-    <div class="flex gap-4">
-        <div class=" px-8 py-4 rounded-md border-black border-[1px] bg-white flex flex-col items-center gap-2"> <img src={React.src} alt="" class="w-12"/>
-        <p>React</p></div>
+    
+    <div class="flex gap-4 flex-wrap">
+     {skills.map(skill=>( <Skill src={skill.src} skillName={skill.name} client:load/>))}  
+       
+   </div>
+ 
   
-   <div class=" px-8 py-4 rounded-md border-black border-[1px] bg-white flex flex-col items-center gap-2"><img src={Html.src} alt="" class="w-12"> <p>Html</p></div>
-   <img src={Css.src} alt="" class="w-12"/>
-    <img src={Sass.src} alt="" class="w-12"/>
-    <img src={Typescript.src} alt="" class="w-12">
-    <img src={Knex.src} alt="" class="w-12">
-    <img src={Node.src} alt="" class="w-12">
-    <img src={Git.src} alt="" class="w-12">
-    <img src={Github.src} alt="" class="w-12">
-    <img src={Express.src} alt="" class="w-12">
-    <img src={Tailwind.src} alt="" class="w-12">
-    <img src={Astro.src} alt="" class="w-12">
-    <img src={Mui.src} alt="" class="w-12">
-    <img src={Mysql.src} alt="" class="w-12">
-    <img src={Antd.src} alt="" class="w-12">
   
-    </div>
+   
 </section>
