@@ -1,4 +1,44 @@
 ---
+import "../styles/global.css"
+import React from "../assets/react.svg"
+import Html from "../assets/html5.svg"
+import Css from "../assets/css.svg"
+import Sass from "../assets/sass.svg"
+import Mui from "../assets/mui.svg"
+import Antd from "../assets/antdesign.svg"
+import Mysql from "../assets/mysql.svg"
+import Express from "../assets/express.svg"
+import Git from "../assets/git.svg"
+import Github from "../assets/github.svg"
+import Knex from "../assets/knexdotjs.svg"
+import Node from "../assets/nodedotjs.svg"
+import Tailwind from "../assets/tailwindcss.svg"
+import Typescript from "../assets/typescript.svg"
+import Astro from "../assets/astro.svg"
+import Skill from "../components/Skill"
 
 ---
-<p>skills</p>
+<section class="max-w-[1280px] mx-auto">
+    <h2 class="text-4xl font-bold">Skills</h2>
+    <Skill src={Css.src} skillName="Css" client:load/>
+    <div class="flex gap-4">
+        <div class=" px-8 py-4 rounded-md border-black border-[1px] bg-white flex flex-col items-center gap-2"> <img src={React.src} alt="" class="w-12"/>
+        <p>React</p></div>
+  
+   <div class=" px-8 py-4 rounded-md border-black border-[1px] bg-white flex flex-col items-center gap-2"><img src={Html.src} alt="" class="w-12"> <p>Html</p></div>
+   <img src={Css.src} alt="" class="w-12"/>
+    <img src={Sass.src} alt="" class="w-12"/>
+    <img src={Typescript.src} alt="" class="w-12">
+    <img src={Knex.src} alt="" class="w-12">
+    <img src={Node.src} alt="" class="w-12">
+    <img src={Git.src} alt="" class="w-12">
+    <img src={Github.src} alt="" class="w-12">
+    <img src={Express.src} alt="" class="w-12">
+    <img src={Tailwind.src} alt="" class="w-12">
+    <img src={Astro.src} alt="" class="w-12">
+    <img src={Mui.src} alt="" class="w-12">
+    <img src={Mysql.src} alt="" class="w-12">
+    <img src={Antd.src} alt="" class="w-12">
+  
+    </div>
+</section>
