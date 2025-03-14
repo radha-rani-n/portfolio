@@ -24,6 +24,11 @@ body {
   background-color: var(--body-color);
   color: var(--title-color);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
