@@ -104,7 +104,7 @@ const other = [
       <details>
         <summary class="list-none text-2xl font-semibold flex gap-4"
           >Frontend Skills<i
-            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-24"
+            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-16"
           ></i></summary
         >
         <ul class="flex flex-col items-start gap-4 mt-4 justify-center">
@@ -125,12 +125,32 @@ const other = [
       <details>
         <summary class="list-none text-2xl font-semibold flex gap-4"
           >Backend Skills<i
-            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-24"
+            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-16"
           ></i></summary
         >
         <ul class="flex flex-col items-start gap-4 mt-4 justify-center">
           {
             backendSkills.map((skill) => (
+              <li class="font-md flex items-center gap-4 ">
+                <img src={badge.src} alt="" class="w-6" />
+                {skill.name}
+              </li>
+            ))
+          }
+        </ul>
+      </details>
+    </div>
+    <div class="flex text-2xl gap-4">
+      <i class="uil uil-server-network text-[var(--first-color)]"></i>
+      <details>
+        <summary class="list-none text-2xl font-semibold flex gap-4"
+          >Other Skills<i
+            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-16"
+          ></i></summary
+        >
+        <ul class="flex flex-col items-start gap-4 mt-4 justify-center">
+          {
+            other.map((skill) => (
               <li class="font-md flex items-center gap-4 ">
                 <img src={badge.src} alt="" class="w-6" />
                 {skill.name}
