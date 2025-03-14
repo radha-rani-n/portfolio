@@ -1,4 +1,61 @@
 ---
-
+import Voya from "../assets/Voya-HomePage.png";
 ---
-<p>projects</p>
+
+<section class="flex items-center justify-center flex-col">
+  <h2 class="text-4xl font-bold">Projects</h2>
+  <article class="w-full grid grid-cols-2 my-16 gap-16 items-center">
+    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-fit">
+      <img src={Voya.src} alt="" class="w-full rounded-xl" />
+    </div>
+    <div class="flex flex-col gap-8">
+      <p class="text-xl">
+        <span class="text=[var(--first-color)]">-</span> FUllStack
+      </p>
+      <h3 class="text-3xl font-bold">Travel Planner App</h3>
+      <p class="flex-wrap">
+        Voya is your ultimate travel buddy, designed to help you plan and manage
+        trips effortlessly. It aloows you to explore popular attractions at any
+        destination, ensuring you never miss out on ley experiences.
+      </p>
+      <ul class="flex gap-4">
+        <li
+          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
+        >
+          TypeScript
+        </li>
+        <li
+          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
+        >
+          React
+        </li>
+        <li
+          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
+        >
+          Saas
+        </li>
+        <li
+          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
+        >
+          Express
+        </li>
+        <li
+          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
+        >
+          Knex
+        </li>
+        <li
+          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
+        >
+          Postgres
+        </li>
+      </ul>
+      <a
+        href="https://travel.voya.my/"
+        target="_blank"
+        class="px-8 py-3 bg-[var(--first-color-alt)] rounded-full text-white text-xl w-fit font-bold"
+        >EXPLORER<i class="uil uil-arrow-up-right ml-2"></i></a
+      >
+    </div>
+  </article>
+</section>
