@@ -1,5 +1,5 @@
 ---
-import Voya from "../assets/Voya-HomePage.png";
+import Voya from "../assets/Voya-Home.png";
 import TodoList from "../assets/TodoList.png";
 import CoTeacher from "../assets/CO-Teacher.png";
 ---
@@ -7,8 +7,8 @@ import CoTeacher from "../assets/CO-Teacher.png";
 <section class="flex items-center justify-center flex-col">
   <h2 class="text-4xl font-bold">Projects</h2>
   <article class="w-full grid grid-cols-2 my-16 gap-16 items-center">
-    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-fit">
-      <img src={Voya.src} alt="" class="w-full rounded-xl" />
+    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-[300px]">
+      <img src={Voya.src} alt="" class="w-full rounded-xl h-full" />
     </div>
     <div class="flex flex-col gap-8">
       <p class="text-xl">
@@ -61,9 +61,6 @@ import CoTeacher from "../assets/CO-Teacher.png";
     </div>
   </article>
   <article class="w-full grid grid-cols-2 my-16 gap-16 items-center">
-    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-fit">
-      <img src={CoTeacher.src} alt="" class="w-full rounded-xl" />
-    </div>
     <div class="flex flex-col gap-8">
       <p class="text-xl">
         <span class="text=[var(--first-color)]">-</span> FUllStack
@@ -97,16 +94,19 @@ import CoTeacher from "../assets/CO-Teacher.png";
         </li>
       </ul>
       <a
-        href="https://travel.voya.my/"
+        href=""
         target="_blank"
         class="px-8 py-3 bg-[var(--first-color-alt)] rounded-full text-white text-xl w-fit font-bold"
         >EXPLORER<i class="uil uil-arrow-up-right ml-2"></i></a
       >
     </div>
+    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-[300px]">
+      <img src={CoTeacher.src} alt="" class="w-full rounded-xl h-full" />
+    </div>
   </article>
   <article class="w-full grid grid-cols-2 my-16 gap-16 items-center">
-    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-fit">
-      <img src={TodoList.src} alt="" class="w-full rounded-xl" />
+    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-[300px]">
+      <img src={TodoList.src} alt="" class="w-full rounded-xl h-full" />
     </div>
     <div class="flex flex-col gap-8">
       <p class="text-xl">
