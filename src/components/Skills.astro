@@ -1,82 +1,144 @@
 ---
-import "../styles/global.css"
-import React from "../assets/react.svg"
-import Html from "../assets/html5.svg"
-import Css from "../assets/css.svg"
-import Sass from "../assets/sass.svg"
-import Mui from "../assets/mui.svg"
-import Antd from "../assets/antdesign.svg"
-import Mysql from "../assets/mysql.svg"
-import Express from "../assets/express.svg"
-import Git from "../assets/git.svg"
-import Github from "../assets/github.svg"
-import Knex from "../assets/knexdotjs.svg"
-import Node from "../assets/nodedotjs.svg"
-import Tailwind from "../assets/tailwindcss.svg"
-import Typescript from "../assets/typescript.svg"
-import Astro from "../assets/astro.svg"
-import Skill from "../components/Skill"
+import "../styles/global.css";
+import React from "../assets/react.svg";
+import Html from "../assets/html5.svg";
+import Css from "../assets/css.svg";
+import Sass from "../assets/sass.svg";
+import Mui from "../assets/mui.svg";
+import Antd from "../assets/antdesign.svg";
+import Mysql from "../assets/mysql.svg";
+import Express from "../assets/express.svg";
+import Git from "../assets/git.svg";
+import Github from "../assets/github.svg";
+import Knex from "../assets/knexdotjs.svg";
+import Node from "../assets/nodedotjs.svg";
+import Tailwind from "../assets/tailwindcss.svg";
+import Typescript from "../assets/typescript.svg";
+import Astro from "../assets/astro.svg";
+import badge from "../assets/guarantee.png";
+import Skill from "../components/Skill";
 
-const skills=[
-    {
-        name:"Html", src:Html,
-    },
-    {
-        name:"Css", src:Css,
-    },
-    {
-        name:"React", src:React,
-    },
-    {
-        name:"Sass", src:Sass,
-    },
-    {
-        name:"Typescript", src:Typescript,
-    },
-    {
-        name:"Tailwind", src:Tailwind,
-    },
-    {
-        name:"Knex", src:Knex,
-    },
-    {
-        name:"Mysql", src:Mysql,
-    },
-    {
-        name:"Express", src:Express,
-    },
-    {
-        name:"Node", src:Node,
-    },
-    {
-        name:"Mui", src:Mui,
-    },
-    {
-        name:"Antd", src:Antd,
-    },
-    {
-        name:"Git", src:Git,
-    },
-    {
-        name:"Github", src:Github,
-    }
-    ,
-    {
-        name:"Astro", src:Astro,
-    }
-  
-]
+const frontEndSkills = [
+  {
+    name: "Html",
+    src: Html,
+  },
+  {
+    name: "Css",
+    src: Css,
+  },
+  {
+    name: "React",
+    src: React,
+  },
+  {
+    name: "Sass",
+    src: Sass,
+  },
+  {
+    name: "Typescript",
+    src: Typescript,
+  },
+  {
+    name: "Tailwind",
+    src: Tailwind,
+  },
 
+  {
+    name: "Mui",
+    src: Mui,
+  },
+  {
+    name: "Antd",
+    src: Antd,
+  },
+
+  {
+    name: "Astro",
+    src: Astro,
+  },
+];
+const backendSkills = [
+  {
+    name: "Knex",
+    src: Knex,
+  },
+  {
+    name: "Mysql",
+    src: Mysql,
+  },
+  {
+    name: "Express",
+    src: Express,
+  },
+  {
+    name: "Node",
+    src: Node,
+  },
+];
+const other = [
+  {
+    name: "Git",
+    src: Git,
+  },
+  {
+    name: "Github",
+    src: Github,
+  },
+];
 ---
-<section class="max-w-[1280px] mx-auto p-8 flex flex-col items-center justify-center gap-16 my-16">
-    <h2 class="text-4xl font-bold">Skills</h2>
-    
-    <div class="flex gap-4 flex-wrap">
-     {skills.map(skill=>( <Skill src={skill.src} skillName={skill.name} client:load/>))}  
+
+<section
+  class="max-w-[1280px] mx-auto p-8 flex flex-col items-center justify-center gap-16 my-32"
+>
+  <h2 class="text-4xl font-bold">Skills</h2>
+
+  <!-- <div class="flex gap-4 flex-wrap">
+     {frontEndSkills.map(skill=>( <Skill src={skill.src} skillName={skill.name} client:load/>))}  
        
-   </div>
- 
-  
-  
-   
+   </div> -->
+
+  <div class="flex justify-center gap-16 w-full">
+    <div class="flex text-2xl gap-4">
+      <i class="uil uil-brackets-curly text-[var(--first-color)]"></i>
+      <details>
+        <summary class="list-none text-2xl font-semibold flex gap-4"
+          >Frontend Skills<i
+            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-24"
+          ></i></summary
+        >
+        <ul class="flex flex-col items-start gap-4 mt-4 justify-center">
+          {
+            frontEndSkills.map((skill) => (
+              <li class="font-md flex gap-4 items-center">
+                {" "}
+                <img src={badge.src} alt="" class="w-6" />
+                {skill.name}
+              </li>
+            ))
+          }
+        </ul>
+      </details>
+    </div>
+    <div class="flex text-2xl gap-4">
+      <i class="uil uil-server-network text-[var(--first-color)]"></i>
+      <details>
+        <summary class="list-none text-2xl font-semibold flex gap-4"
+          >Backend Skills<i
+            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-24"
+          ></i></summary
+        >
+        <ul class="flex flex-col items-start gap-4 mt-4 justify-center">
+          {
+            backendSkills.map((skill) => (
+              <li class="font-md flex items-center gap-4 ">
+                <img src={badge.src} alt="" class="w-6" />
+                {skill.name}
+              </li>
+            ))
+          }
+        </ul>
+      </details>
+    </div>
+  </div>
 </section>
