@@ -8,7 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [react()],
   site: "https://radha-rani-n.github.io",
-  base: "portfolio",
+  base: "",
   vite: {
     plugins: [tailwindcss()],
   },
