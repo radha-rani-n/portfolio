@@ -16,183 +16,77 @@ import Tailwind from "../assets/tailwindcss.svg";
 import Typescript from "../assets/typescript.svg";
 import Astro from "../assets/astro.svg";
 import badge from "../assets/guarantee.png";
-import Skill from "../components/Skill";
+import Skill from "../components/Skill.astro";
 import Clerk from "../assets/clerk.svg";
 import Netlify from "../assets/netlify.svg";
 import Heroku from "../assets/heroku.svg";
 import Vercel from "../assets/vercel.svg";
+import Postgresql from "../assets/postgresql.svg";
+import Prisma from "../assets/prisma.svg";
 const frontEndSkills = [
-  {
-    name: "Html",
-    src: Html,
-  },
-  {
-    name: "Css",
-    src: Css,
-  },
-  {
-    name: "React",
-    src: React,
-  },
-  {
-    name: "Sass",
-    src: Sass,
-  },
-  {
-    name: "Typescript",
-    src: Typescript,
-  },
-  {
-    name: "Tailwind",
-    src: Tailwind,
-  },
-
-  {
-    name: "Mui",
-    src: Mui,
-  },
-  {
-    name: "Antd",
-    src: Antd,
-  },
+  { name: "Html", src: Html },
+  { name: "Css", src: Css },
+  { name: "React", src: React },
+  { name: "Sass", src: Sass },
+  { name: "Typescript", src: Typescript },
+  { name: "Tailwind", src: Tailwind },
+  { name: "Mui", src: Mui },
+  { name: "Antd", src: Antd },
 ];
 const backendSkills = [
-  {
-    name: "Knex",
-    src: Knex,
-  },
-  {
-    name: "Mysql",
-    src: Mysql,
-  },
-  {
-    name: "Express",
-    src: Express,
-  },
-  {
-    name: "Node",
-    src: Node,
-  },
+  { name: "Knex", src: Knex },
+  { name: "Mysql", src: Mysql },
+  { name: "PostgreSQL", src: Postgresql },
+  { name: "Prisma", src: Prisma },
+  { name: "Express", src: Express },
+  { name: "Node", src: Node },
 ];
 const other = [
-  {
-    name: "Git",
-    src: Git,
-  },
-  {
-    name: "Github",
-    src: Github,
-  },
-  {
-    name: "Vercel",
-    src: Vercel,
-  },
-  {
-    name: "Clerk",
-    src: Clerk,
-  },
-  {
-    name: "Heroku",
-    src: Heroku,
-  },
-  {
-    name: "Netlify",
-    src: Netlify,
-  },
+  { name: "Git", src: Git },
+  { name: "Github", src: Github },
+  { name: "Vercel", src: Vercel },
+  { name: "Clerk", src: Clerk },
+  { name: "Heroku", src: Heroku },
+  { name: "Netlify", src: Netlify },
 ];
 ---
 
 <section
-  class="flex flex-col items-center justify-center gap-16 my-32 pt-24"
+  class="flex flex-col items-center justify-center gap-10 md:gap-16 my-20 md:my-32 pt-20 md:pt-24 px-6 md:px-0"
   id="skills"
 >
-  <h2 class="text-4xl font-bold">Skills</h2>
-  <h3 class="text-3xl font-semibold">Frontend</h3>
-  <div class="flex gap-4 flex-wrap">
-    {
-      frontEndSkills.map((skill) => (
-        <Skill src={skill.src} skillName={skill.name} client:load />
-      ))
-    }
-  </div>
-  <h3 class="text-3xl font-semibold">Backend</h3>
-  <div class="flex gap-4 flex-wrap">
-    {
-      backendSkills.map((skill) => (
-        <Skill src={skill.src} skillName={skill.name} client:load />
-      ))
-    }
-  </div>
-  <h3 class="text-3xl font-semibold">Other</h3>
-  <div class="flex gap-4 flex-wrap">
-    {
-      other.map((skill) => (
-        <Skill src={skill.src} skillName={skill.name} client:load />
-      ))
-    }
+  <h2 class="text-3xl md:text-4xl font-bold section-heading reveal">Skills</h2>
+
+  <div class="reveal w-full">
+    <h3 class="text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-6 text-[var(--first-color-alt)]">Frontend</h3>
+    <div class="flex gap-3 md:gap-4 flex-wrap justify-center stagger-children">
+      {
+        frontEndSkills.map((skill) => (
+          <Skill src={skill.src} skillName={skill.name}  />
+        ))
+      }
+    </div>
   </div>
 
-  <!-- <div class="flex justify-center gap-16 w-full">
-    <div class="flex text-2xl gap-4">
-      <i class="uil uil-brackets-curly text-[var(--first-color)]"></i>
-      <details>
-        <summary class="list-none text-2xl font-semibold flex gap-4"
-          >Frontend Skills<i
-            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-16"
-          ></i></summary
-        >
-        <ul class="flex flex-col items-start gap-4 mt-4 justify-center">
-          {
-            frontEndSkills.map((skill) => (
-              <li class="font-md flex gap-4 items-center">
-                {" "}
-                <img src={badge.src} alt="" class="w-6" />
-                {skill.name}
-              </li>
-            ))
-          }
-        </ul>
-      </details>
+  <div class="reveal w-full">
+    <h3 class="text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-6 text-[var(--first-color-alt)]">Backend</h3>
+    <div class="flex gap-3 md:gap-4 flex-wrap justify-center stagger-children">
+      {
+        backendSkills.map((skill) => (
+          <Skill src={skill.src} skillName={skill.name}  />
+        ))
+      }
     </div>
-    <div class="flex text-2xl gap-4">
-      <i class="uil uil-server-network text-[var(--first-color)]"></i>
-      <details>
-        <summary class="list-none text-2xl font-semibold flex gap-4"
-          >Backend Skills<i
-            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-16"
-          ></i></summary
-        >
-        <ul class="flex flex-col items-start gap-4 mt-4 justify-center">
-          {
-            backendSkills.map((skill) => (
-              <li class="font-md flex items-center gap-4 ">
-                <img src={badge.src} alt="" class="w-6" />
-                {skill.name}
-              </li>
-            ))
-          }
-        </ul>
-      </details>
+  </div>
+
+  <div class="reveal w-full">
+    <h3 class="text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-6 text-[var(--first-color-alt)]">Other</h3>
+    <div class="flex gap-3 md:gap-4 flex-wrap justify-center stagger-children">
+      {
+        other.map((skill) => (
+          <Skill src={skill.src} skillName={skill.name}  />
+        ))
+      }
     </div>
-    <div class="flex text-2xl gap-4">
-      <i class="uil uil-server-network text-[var(--first-color)]"></i>
-      <details>
-        <summary class="list-none text-2xl font-semibold flex gap-4"
-          >Other Skills<i
-            class="uil uil-angle-down text-[var(--first-color)] cursor-pointer ml-16"
-          ></i></summary
-        >
-        <ul class="flex flex-col items-start gap-4 mt-4 justify-center">
-          {
-            other.map((skill) => (
-              <li class="font-md flex items-center gap-4 ">
-                <img src={badge.src} alt="" class="w-6" />
-                {skill.name}
-              </li>
-            ))
-          }
-        </ul>
-      </details>
-    </div>
-  </div> -->
+  </div>
 </section>

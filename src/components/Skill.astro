@@ -1,0 +1,8 @@
+---
+const { src, skillName } = Astro.props;
+---
+
+<div class="skill-card w-24 h-24 md:w-30 md:h-30 px-4 md:px-8 py-3 md:py-4 rounded-xl border border-gray-200 bg-white flex flex-col items-center gap-2 shadow-sm cursor-default">
+  <img src={src.src} alt={skillName} class="w-8 md:w-12" />
+  <p class="font-semibold text-xs md:text-sm">{skillName}</p>
+</div>

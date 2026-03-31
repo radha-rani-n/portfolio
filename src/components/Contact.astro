@@ -2,36 +2,55 @@
 
 ---
 
-<section class="bg-[var(--first-color)] px-8 pt-8" id="contact">
-  <div class="max-w-[1280px] mx-auto flex flex-col items-center justify-center">
-    <div
-      class="max-w-[1280px]
-    mx-auto
-    flex
-    items-center
-    justify-center
- mb-8
-    gap-16"
-    >
-      <p class="text-white text-4xl font-sans">Find me at</p>
-
-      <ul class="flex gap-8 items-center justify-center">
-        <li>
-          <a href="https://www.linkedin.com/in/radha-rani-n/" target="_blank"
-            ><i class="uil uil-linkedin text-white text-4xl"></i></a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/radha-rani-n" target="_blank"
-            ><i class="uil uil-github text-white text-4xl"></i></a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div class="w-full h-[1px] bg-[var(--first-color-lighter)]"></div>
-    <p class="text-white text-sm p-4">
-      &copyCopyright 2025. Made by Radha Rani Nathibayannagri
+<!-- CTA Section -->
+<section class="py-14 md:py-20 px-6 md:px-8" id="contact">
+  <div class="max-w-[800px] mx-auto text-center reveal">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Let's Work Together</h2>
+    <p class="text-[var(--text-color)] text-base md:text-lg mb-8 md:mb-10 leading-relaxed">
+      I'm actively seeking opportunities in Software Development, Web Development,
+      and Fullstack Engineering. If you're looking for someone who's eager to
+      contribute, learn fast, and ship quality code — I'd love to connect.
     </p>
+    <div class="flex justify-center gap-3 md:gap-4 mb-8 md:mb-10 flex-wrap">
+      <a
+        href="https://www.linkedin.com/in/radha-rani-n/"
+        target="_blank"
+        class="cta-social-btn flex items-center gap-2 md:gap-3 px-5 md:px-6 py-3 md:py-3.5 rounded-xl border-2 border-[var(--first-color)] text-[var(--first-color)] font-medium hover:bg-[var(--first-color)] hover:text-white transition-all duration-300 btn-hover text-sm md:text-base"
+      >
+        <i class="uil uil-linkedin text-lg md:text-xl"></i> LinkedIn
+      </a>
+      <a
+        href="https://github.com/radha-rani-n"
+        target="_blank"
+        class="cta-social-btn flex items-center gap-2 md:gap-3 px-5 md:px-6 py-3 md:py-3.5 rounded-xl border-2 border-[var(--title-color)] text-[var(--title-color)] font-medium hover:bg-[var(--title-color)] hover:text-white transition-all duration-300 btn-hover text-sm md:text-base"
+      >
+        <i class="uil uil-github text-lg md:text-xl"></i> GitHub
+      </a>
+      <a
+        href="./Radha-Resume.pdf"
+        download
+        class="cta-social-btn flex items-center gap-2 md:gap-3 px-5 md:px-6 py-3 md:py-3.5 rounded-xl bg-[var(--first-color-alt)] text-white font-medium btn-hover pulse-glow text-sm md:text-base"
+      >
+        <i class="uil uil-file-download-alt text-lg md:text-xl"></i> Download Resume
+      </a>
+    </div>
   </div>
 </section>
+
+<!-- Footer -->
+<footer class="bg-[var(--first-color)] px-6 md:px-8 py-6">
+  <div class="max-w-[1280px] mx-auto flex flex-col items-center gap-4">
+    <div class="flex items-center gap-6">
+      <a href="https://www.linkedin.com/in/radha-rani-n/" target="_blank">
+        <i class="contact-icon uil uil-linkedin text-white text-2xl inline-block"></i>
+      </a>
+      <a href="https://github.com/radha-rani-n" target="_blank">
+        <i class="contact-icon uil uil-github text-white text-2xl inline-block"></i>
+      </a>
+    </div>
+    <div class="w-full h-[1px] bg-white/20"></div>
+    <p class="text-white/70 text-xs md:text-sm text-center">
+      &copy; 2026 Radha Rani Nathibayannagri. Built with Astro & Tailwind.
+    </p>
+  </div>
+</footer>
