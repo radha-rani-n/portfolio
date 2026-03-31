@@ -1,5 +1,5 @@
 ---
-import VoyaVideo from "../assets/voya-demo.mov";
+import VoyaImg from "../assets/Voya-Home.png";
 import LetsSwapImg from "../assets/lets-swap-image.png";
 import TodoList from "../assets/TodoList.png";
 import CoTeacher from "../assets/CO-Teacher.png";
@@ -80,23 +80,8 @@ import CoTeacher from "../assets/CO-Teacher.png";
         ><i class="uil uil-github-alt text-lg"></i> View on GitHub<i class="uil uil-arrow-up-right ml-1"></i></a
       >
     </div>
-    <div class="reveal-right w-full h-[220px] md:h-[300px]">
-      <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg border border-gray-200 h-full flex flex-col cursor-pointer relative group" data-video-src={VoyaVideo}>
-        <div class="bg-gray-100 px-4 py-2 flex items-center gap-3 border-b border-gray-200 shrink-0">
-          <div class="flex gap-1.5">
-            <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
-            <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
-            <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
-          </div>
-          <div class="flex-1 bg-white rounded-md px-3 py-1 text-xs text-gray-400 truncate">voya-travel.app</div>
-        </div>
-        <div class="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-all duration-300 z-10 pointer-events-none">
-          <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <i class="uil uil-expand-arrows text-[var(--first-color)] text-2xl"></i>
-          </div>
-        </div>
-        <video src={VoyaVideo} autoplay muted loop playsinline class="demo-video w-full flex-1 object-cover object-top"></video>
-      </div>
+    <div class="project-img-wrapper bg-[var(--first-color-lighter)] p-4 w-full h-[220px] md:h-[300px] reveal-right">
+      <img src={VoyaImg.src} alt="Voya Travel Planner" class="w-full rounded-xl h-full object-cover" />
     </div>
   </article>
 
@@ -164,13 +149,6 @@ import CoTeacher from "../assets/CO-Teacher.png";
   </article>
 </section>
 
-<!-- Shared lightbox (outside project cards) -->
-<div id="video-lightbox" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/85 p-6 md:p-16">
-  <button id="lightbox-close" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-2xl cursor-pointer transition-colors z-10">
-    <i class="uil uil-times"></i>
-  </button>
-  <video id="lightbox-video" autoplay muted loop playsinline controls class="max-w-[90vw] max-h-[85vh] rounded-xl shadow-2xl"></video>
-</div>
 
 <style>
   .project-card {
@@ -194,46 +172,3 @@ import CoTeacher from "../assets/CO-Teacher.png";
     50% { box-shadow: 0 4px 20px rgba(245, 158, 11, 0.5); }
   }
 </style>
-
-<script>
-  // Speed up all inline demo videos
-  document.querySelectorAll<HTMLVideoElement>(".demo-video").forEach((v) => {
-    v.playbackRate = 2.5;
-  });
-
-  // Shared lightbox logic
-  const lightbox = document.getElementById("video-lightbox");
-  const lightboxVideo = document.getElementById("lightbox-video") as HTMLVideoElement;
-  const closeBtn = document.getElementById("lightbox-close");
-
-  document.querySelectorAll(".video-thumbnail").forEach((thumb) => {
-    thumb.addEventListener("click", () => {
-      const src = (thumb as HTMLElement).dataset.videoSrc;
-      if (lightbox && lightboxVideo && src) {
-        lightboxVideo.src = src;
-        lightboxVideo.playbackRate = 2;
-        lightbox.classList.remove("hidden");
-        lightbox.classList.add("flex");
-        document.body.style.overflow = "hidden";
-      }
-    });
-  });
-
-  function closeLightbox() {
-    if (lightbox && lightboxVideo) {
-      lightbox.classList.add("hidden");
-      lightbox.classList.remove("flex");
-      lightboxVideo.pause();
-      lightboxVideo.removeAttribute("src");
-      document.body.style.overflow = "";
-    }
-  }
-
-  closeBtn?.addEventListener("click", closeLightbox);
-  lightbox?.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLightbox();
-  });
-</script>
