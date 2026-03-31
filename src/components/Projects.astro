@@ -1,7 +1,6 @@
 ---
-import Voya from "../assets/Voya-Home.png";
-import VoyaVideo from "../assets/voya-demo-video.mov";
-import LetsSwapVideo from "../assets/lets-swap-demo.mov";
+import VoyaVideo from "../assets/voya-demo.mov";
+import LetsSwapImg from "../assets/lets-swap image.png";
 import TodoList from "../assets/TodoList.png";
 import CoTeacher from "../assets/CO-Teacher.png";
 ---
@@ -14,23 +13,8 @@ import CoTeacher from "../assets/CO-Teacher.png";
 
   <!-- Project 1: Let's Swap -->
   <article class="project-card w-full flex flex-col md:grid md:grid-cols-2 my-6 md:my-10 gap-8 md:gap-16 items-center p-6 md:p-8 rounded-2xl">
-    <div class="reveal-left w-full h-[220px] md:h-[300px]">
-      <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg border border-gray-200 h-full flex flex-col cursor-pointer relative group" data-video-src={LetsSwapVideo}>
-        <div class="bg-gray-100 px-4 py-2 flex items-center gap-3 border-b border-gray-200 shrink-0">
-          <div class="flex gap-1.5">
-            <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
-            <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
-            <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
-          </div>
-          <div class="flex-1 bg-white rounded-md px-3 py-1 text-xs text-gray-400 truncate">lets-swap.vercel.app</div>
-        </div>
-        <div class="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-all duration-300 z-10 pointer-events-none">
-          <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <i class="uil uil-expand-arrows text-[var(--first-color)] text-2xl"></i>
-          </div>
-        </div>
-        <video src={LetsSwapVideo} autoplay muted loop playsinline class="demo-video w-full flex-1 object-cover object-top"></video>
-      </div>
+    <div class="project-img-wrapper bg-[var(--first-color-lighter)] p-4 w-full h-[220px] md:h-[300px] reveal-left">
+      <img src={LetsSwapImg.src} alt="Let's Swap App" class="w-full rounded-xl h-full object-cover" />
     </div>
     <div class="flex flex-col gap-4 md:gap-6 reveal-right">
       <div class="flex items-center gap-3">

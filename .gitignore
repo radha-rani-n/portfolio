@@ -24,4 +24,5 @@ pnpm-debug.log*
 .idea/
 
 # large video files (host externally)
-*.mov
+src/assets/lets-swap-demo.mov
+src/assets/voya-demo-video.mov
