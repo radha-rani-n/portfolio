@@ -1,151 +1,174 @@
 ---
-import Voya from "../assets/Voya-Home.png";
+import VoyaImg from "../assets/Voya-Home.png";
+import LetsSwapImg from "../assets/lets-swap-image.png";
 import TodoList from "../assets/TodoList.png";
 import CoTeacher from "../assets/CO-Teacher.png";
 ---
 
-<section class="flex items-center justify-center flex-col pt-24" id="projects">
-  <h2 class="text-4xl font-bold">Projects</h2>
-  <article class="w-full grid grid-cols-2 my-16 gap-16 items-center">
-    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-[300px]">
-      <img src={Voya.src} alt="" class="w-full rounded-xl h-full" />
+<section class="flex items-center justify-center flex-col pt-20 md:pt-24 my-12 md:my-16 px-6 md:px-0" id="projects">
+  <div class="reveal flex flex-col items-center gap-4 mb-6 md:mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold section-heading">Projects</h2>
+    <p class="text-[var(--text-color)]">What I've built</p>
+  </div>
+
+  <!-- Project 1: Let's Swap -->
+  <article class="project-card w-full flex flex-col md:grid md:grid-cols-2 my-6 md:my-10 gap-8 md:gap-16 items-center p-6 md:p-8 rounded-2xl">
+    <div class="project-img-wrapper bg-[var(--first-color-lighter)] p-4 w-full h-[220px] md:h-[300px] reveal-left">
+      <img src={LetsSwapImg.src} alt="Let's Swap App" class="w-full rounded-xl h-full object-cover" />
     </div>
-    <div class="flex flex-col gap-8">
-      <p class="text-xl">
-        <span class="text=[var(--first-color)]">-</span> FullStack
+    <div class="flex flex-col gap-4 md:gap-6 reveal-right">
+      <div class="flex items-center gap-3">
+        <p class="text-xs font-semibold uppercase tracking-widest text-[var(--first-color)] bg-[var(--first-color-lighter)]/40 px-3 py-1 rounded-full">FullStack</p>
+      </div>
+      <h3 class="text-2xl md:text-3xl font-bold">Let's Swap</h3>
+      <p class="leading-relaxed text-[var(--text-color)] text-sm md:text-base">
+        A plant trading community app where users can list and swap plants
+        with others nearby. Features real-time chat, location-based listings,
+        and distance filtering — built for plant lovers who want to grow their
+        collection without spending money.
       </p>
-      <h3 class="text-3xl font-bold">Travel Planner App</h3>
-      <p class="flex-wrap">
-        Voya is your ultimate travel buddy, designed to help you plan and manage
-        trips effortlessly. It aloows you to explore popular attractions at any
-        destination, ensuring you never miss out on ley experiences.
-      </p>
-      <ul class="flex gap-4">
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          TypeScript
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          React
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          Saas
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          Express
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          Knex
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          Postgres
-        </li>
+      <ul class="flex gap-2 flex-wrap">
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">TypeScript</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">React</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Tailwind</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Express</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">PostgreSQL</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Prisma</li>
       </ul>
-      <a
-        href="https://travel.voya.my/"
-        target="_blank"
-        class="px-8 py-3 bg-[var(--first-color-alt)] rounded-full text-white text-xl w-fit font-bold hover:bg-[var(--first-color)]"
-        >EXPLORER<i class="uil uil-arrow-up-right ml-2"></i></a
-      >
+      <div class="flex gap-3 flex-wrap">
+        <a
+          href="https://lets-swap.vercel.app/"
+          target="_blank"
+          class="explorer-btn px-5 md:px-6 py-3 bg-[var(--first-color-alt)] rounded-full text-white w-fit font-bold btn-hover inline-flex items-center gap-2 text-sm md:text-base"
+          ><i class="uil uil-external-link-alt text-lg"></i> Live Demo<i class="uil uil-arrow-up-right ml-1"></i></a
+        >
+        <a
+          href="https://github.com/radha-rani-n/lets-swap"
+          target="_blank"
+          class="px-5 md:px-6 py-3 rounded-full border-2 border-[var(--first-color-alt)] text-[var(--first-color-alt)] w-fit font-bold btn-hover inline-flex items-center gap-2 text-sm md:text-base hover:bg-[var(--first-color-alt)] hover:text-white transition-colors duration-300"
+          ><i class="uil uil-github-alt text-lg"></i> GitHub</a
+        >
+      </div>
     </div>
   </article>
-  <article class="w-full grid grid-cols-2 my-16 gap-16 items-center">
-    <div class="flex flex-col gap-8">
-      <p class="text-xl">
-        <span class="text=[var(--first-color)]">-</span> FullStack
+
+  <!-- Project 2: Voya -->
+  <article class="project-card w-full flex flex-col-reverse md:grid md:grid-cols-2 my-6 md:my-10 gap-8 md:gap-16 items-center p-6 md:p-8 rounded-2xl">
+    <div class="flex flex-col gap-4 md:gap-6 reveal-left">
+      <div class="flex items-center gap-3">
+        <p class="text-xs font-semibold uppercase tracking-widest text-[var(--first-color)] bg-[var(--first-color-lighter)]/40 px-3 py-1 rounded-full">FullStack</p>
+      </div>
+      <h3 class="text-2xl md:text-3xl font-bold">Voya — Travel Planner</h3>
+      <p class="leading-relaxed text-[var(--text-color)] text-sm md:text-base">
+        A fullstack travel planning app where users can search destinations,
+        browse popular attractions, and organize trips — all in one place.
+        Built with a TypeScript + React frontend and an Express/Knex/Postgres
+        backend with RESTful API endpoints.
       </p>
-      <h3 class="text-3xl font-bold">Co-Teacher App</h3>
-      <p class="flex-wrap">
-        Co-Teacher is an AI-powered assistant designed to foster AI literacy,
-        critical thinking, and responsible AI usage. It won first place in the
-        BrainStation x Microsoft Industry Project hackathon.
+      <ul class="flex gap-2 flex-wrap">
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">TypeScript</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">React</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Sass</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Express</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Knex</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Postgres</li>
+      </ul>
+      <a
+        href="https://github.com/radha-rani-n/radha-rani-nathibayannagari-voya"
+        target="_blank"
+        class="explorer-btn px-5 md:px-6 py-3 bg-[var(--first-color-alt)] rounded-full text-white w-fit font-bold btn-hover inline-flex items-center gap-2 text-sm md:text-base"
+        ><i class="uil uil-github-alt text-lg"></i> View on GitHub<i class="uil uil-arrow-up-right ml-1"></i></a
+      >
+    </div>
+    <div class="project-img-wrapper bg-[var(--first-color-lighter)] p-4 w-full h-[220px] md:h-[300px] reveal-right">
+      <img src={VoyaImg.src} alt="Voya Travel Planner" class="w-full rounded-xl h-full object-cover" />
+    </div>
+  </article>
+
+  <!-- Project 3: Co-Teacher -->
+  <article class="project-card w-full flex flex-col md:grid md:grid-cols-2 my-6 md:my-10 gap-8 md:gap-16 items-center p-6 md:p-8 rounded-2xl">
+    <div class="project-img-wrapper bg-[var(--first-color-lighter)] p-4 w-full h-[220px] md:h-[300px] reveal-left">
+      <img src={CoTeacher.src} alt="Co-Teacher App" class="w-full rounded-xl h-full object-cover" />
+    </div>
+    <div class="flex flex-col gap-4 md:gap-6 reveal-right">
+      <div class="flex items-center gap-3">
+        <p class="text-xs font-semibold uppercase tracking-widest text-[var(--first-color)] bg-[var(--first-color-lighter)]/40 px-3 py-1 rounded-full">FullStack</p>
+        <p class="text-xs font-semibold uppercase tracking-widest text-amber-600 bg-amber-100 px-3 py-1 rounded-full">Hackathon Winner</p>
+      </div>
+      <h3 class="text-2xl md:text-3xl font-bold">Co-Teacher — AI Education Tool</h3>
+      <p class="leading-relaxed text-[var(--text-color)] text-sm md:text-base">
+        An AI-powered assistant that helps students develop critical thinking
+        and responsible AI usage skills. Built end-to-end in a team during the
+        BrainStation x Microsoft Industry Project — awarded <strong class="text-[var(--title-color)]">first place</strong> out
+        of all competing teams.
       </p>
-      <ul class="flex gap-4">
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          JavaScript
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          React
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          Saas
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          Express
-        </li>
+      <ul class="flex gap-2 flex-wrap">
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">JavaScript</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">React</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Sass</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Express</li>
       </ul>
       <a
         href="https://github.com/parisrahmani/Microsoft-Hackathon-Client"
         target="_blank"
-        class="px-8 py-3 bg-[var(--first-color-alt)] rounded-full text-white text-xl w-fit font-bold hover:bg-[var(--first-color)]"
-        >EXPLORER<i class="uil uil-arrow-up-right ml-2"></i></a
+        class="explorer-btn px-5 md:px-6 py-3 bg-[var(--first-color-alt)] rounded-full text-white w-fit font-bold btn-hover inline-flex items-center gap-2 text-sm md:text-base"
+        ><i class="uil uil-github-alt text-lg"></i> View on GitHub<i class="uil uil-arrow-up-right ml-1"></i></a
       >
     </div>
-    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-[300px]">
-      <img src={CoTeacher.src} alt="" class="w-full rounded-xl h-full" />
-    </div>
   </article>
-  <article class="w-full grid grid-cols-2 my-16 gap-16 items-center">
-    <div class="bg-[var(--first-color-lighter)] p-4 rounded-xl w-fit h-[300px]">
-      <img src={TodoList.src} alt="" class="w-full rounded-xl h-full" />
+
+  <!-- Project 4: TodoList -->
+  <article class="project-card w-full flex flex-col md:grid md:grid-cols-2 my-6 md:my-10 gap-8 md:gap-16 items-center p-6 md:p-8 rounded-2xl">
+    <div class="project-img-wrapper bg-[var(--first-color-lighter)] p-4 w-full h-[220px] md:h-[300px] reveal-left">
+      <img src={TodoList.src} alt="TodoList App" class="w-full rounded-xl h-full object-cover" />
     </div>
-    <div class="flex flex-col gap-8">
-      <p class="text-xl">
-        <span class="text=[var(--first-color)]">-</span> FullStack
+    <div class="flex flex-col gap-4 md:gap-6 reveal-right">
+      <div class="flex items-center gap-3">
+        <p class="text-xs font-semibold uppercase tracking-widest text-[var(--first-color)] bg-[var(--first-color-lighter)]/40 px-3 py-1 rounded-full">FullStack</p>
+      </div>
+      <h3 class="text-2xl md:text-3xl font-bold">TaskFlow — Todo App</h3>
+      <p class="leading-relaxed text-[var(--text-color)] text-sm md:text-base">
+        A fullstack task management app with complete CRUD functionality.
+        Built with a React frontend and Express API backend, featuring a
+        clean responsive UI. Developed in a 3-hour pair programming sprint —
+        demonstrating rapid prototyping and collaboration skills.
       </p>
-      <h3 class="text-3xl font-bold">TodList App</h3>
-      <p class="flex-wrap">
-        A simple and classic Todo List application built in just 3 hours
-        alongside a friend. This app helps users manage their tasks efficiently
-        by allowing them to add, edit, and delete tasks.
-      </p>
-      <ul class="flex gap-4">
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          JavaScript
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          React
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          Saas
-        </li>
-        <li
-          class="px-4 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-sm"
-        >
-          Express
-        </li>
+      <ul class="flex gap-2 flex-wrap">
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">JavaScript</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">React</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Sass</li>
+        <li class="tech-tag px-3 py-1 bg-[var(--first-color-lighter)] rounded-full text-[var(--first-color-alt)] text-xs font-medium cursor-default">Express</li>
       </ul>
       <a
         href="https://github.com/radha-rani-n/Todolist-client-latest"
         target="_blank"
-        class="px-8 py-3 bg-[var(--first-color-alt)] rounded-full text-white text-xl w-fit font-bold hover:bg-[var(--first-color)]"
-        >EXPLORER<i class="uil uil-arrow-up-right ml-2"></i></a
+        class="explorer-btn px-5 md:px-6 py-3 bg-[var(--first-color-alt)] rounded-full text-white w-fit font-bold btn-hover inline-flex items-center gap-2 text-sm md:text-base"
+        ><i class="uil uil-github-alt text-lg"></i> View on GitHub<i class="uil uil-arrow-up-right ml-1"></i></a
       >
     </div>
   </article>
 </section>
+
+
+<style>
+  .project-card {
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    border: 1px solid transparent;
+  }
+  .project-card:hover {
+    box-shadow: 0 16px 48px rgba(110, 87, 224, 0.08);
+    border-color: var(--first-color-lighter);
+    transform: translateY(-2px);
+  }
+  .featured-project {
+    background: linear-gradient(135deg, rgba(110, 87, 224, 0.03) 0%, rgba(255, 193, 7, 0.03) 100%);
+    border: 1px solid var(--first-color-lighter);
+  }
+  .winner-badge {
+    animation: badgeShine 3s ease-in-out infinite;
+  }
+  @keyframes badgeShine {
+    0%, 100% { box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+    50% { box-shadow: 0 4px 20px rgba(245, 158, 11, 0.5); }
+  }
+</style>

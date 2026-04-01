@@ -4,44 +4,78 @@ import Resume from "../assets/Radha-Resume.pdf";
 ---
 
 <section
-  class="my-16 flex flex-col items-center justify-center gap-16 pt-24"
+  class="min-h-screen flex flex-col items-center justify-center gap-6 md:gap-8 py-16 md:py-20 px-6 md:px-0"
   id="about"
 >
-  <div class="flex flex-col items-center justify-center gap-4">
-    <h2 class="text-4xl font-semibold">About Me</h2>
-    <p class="text-[var(--text-color)]">My introduction</p>
+  <div class="flex flex-col items-center gap-2 reveal">
+    <h2 class="text-3xl md:text-4xl font-semibold section-heading">About Me</h2>
+    <p class="text-[var(--text-color)] text-sm">My introduction</p>
   </div>
-  <div class="w-full grid grid-cols-[0.7fr_1fr]">
-    <div class="w-[400px] h-[300px]">
+  <div class="w-full flex flex-col md:grid md:grid-cols-[0.6fr_1fr] gap-8 md:gap-10 items-start">
+    <div class="w-full max-w-[250px] md:max-w-none md:w-full h-[240px] md:h-[320px] reveal-left relative mx-auto">
       <img
         src={RadhaPhoto.src}
-        alt=""
-        class="w-[400px] h-full object-cover rounded-xl brightness-110 contrast-105"
+        alt="Radha Rani"
+        class="w-full h-full object-cover rounded-2xl brightness-110 contrast-105 about-img"
       />
+      <div class="absolute -bottom-2 -right-2 w-full h-full border-2 border-[var(--first-color-lighter)] rounded-2xl -z-10"></div>
     </div>
-    <div class="flex flex-col gap-16 text-[var(--text-color)] items-center">
-      <p class="flex-wrap text-xl text-center tracking-wider">
-        I'm a Software Developer with a background in Supply Chain Analysis,
-        blending problem-solving with creative web solutions. My passion for
-        building user-friendly applications led me to transition into tech. I
-        earned a Software Engineering diploma from BrainStation, where I won
-        first place in the BrainStation x Microsoft Industry Project for
-        developing Co-Teacher, an AI-powered educational assistant. I thrive on
-        front-end development, UI/UX design, and crafting scalable applications.
+    <div class="flex flex-col gap-4 text-[var(--text-color)] reveal-right">
+      <p class="text-sm md:text-base leading-relaxed">
+        My path to software development started in supply chain analysis — where
+        I developed a strong analytical, data-driven mindset and learned to solve
+        complex problems at scale. Working closely with clients at Accenture
+        sharpened my understanding of user needs and what it truly takes to
+        deliver experiences people love.
       </p>
-      <div class="flex gap-32">
-        <div class="flex items-center flex-col">
-          <p class="text-center font-bold text-3xl text-[var(--title-color)]">
-            2+
-          </p>
-          <p>Years experience</p>
+      <p class="text-sm md:text-base leading-relaxed">
+        What drew me to software engineering was the ability to bring imagination
+        and creativity to life — to take an idea and turn it into something real,
+        beautiful, and useful. I earned my Software Engineering diploma from
+        BrainStation, and my team won <strong class="text-[var(--title-color)]">first place</strong>
+        in the BrainStation × Microsoft hackathon for Co-Teacher, an AI-powered
+        tool built to make a real impact.
+      </p>
+      <p class="text-sm md:text-base leading-relaxed">
+        What drives me is knowing real people use what I build every day. I bring
+        creativity, analytical thinking, and a genuine care for the user into
+        everything I ship. I use AI tools like GitHub Copilot, Claude, and Cursor
+        daily — not as a shortcut, but to stay focused on building things that
+        actually matter.
+      </p>
+
+      <!-- Stats + buttons row -->
+      <div class="flex items-center gap-4 md:gap-6 mt-1 flex-wrap">
+        <div class="flex items-center gap-2">
+          <i class="uil uil-briefcase-alt text-lg text-[var(--first-color)]"></i>
+          <span class="font-bold text-[var(--title-color)]">2+</span>
+          <span class="text-xs text-[var(--text-color)]">Years Exp.</span>
         </div>
+        <div class="flex items-center gap-2">
+          <i class="uil uil-folder-open text-lg text-[var(--first-color)]"></i>
+          <span class="font-bold text-[var(--title-color)]">4+</span>
+          <span class="text-xs text-[var(--text-color)]">Projects</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="uil uil-trophy text-lg text-[var(--first-color)]"></i>
+          <span class="font-bold text-[var(--title-color)]">1st</span>
+          <span class="text-xs text-[var(--text-color)]">Hackathon</span>
+        </div>
+      </div>
+
+      <div class="flex gap-3 items-center flex-wrap mt-1">
         <a
-          class="bg-[var(--first-color-alt)] px-4 py-2 rounded-md text-white w-fit cursor-pointer flex items-center gap-2 shadow-bottom"
+          class="bg-[var(--first-color-alt)] px-5 py-2.5 rounded-lg text-white w-fit cursor-pointer flex items-center gap-2 btn-hover font-medium text-sm"
           href="./Radha-Resume.pdf"
           download
         >
           Download CV <i class="uil uil-download-alt"></i>
+        </a>
+        <a
+          href="#contact"
+          class="px-5 py-2.5 rounded-lg border-2 border-[var(--first-color-alt)] text-[var(--first-color-alt)] w-fit cursor-pointer flex items-center gap-2 btn-hover font-medium hover:bg-[var(--first-color-alt)] hover:text-white transition-colors duration-300 text-sm"
+        >
+          Let's Talk <i class="uil uil-message"></i>
         </a>
       </div>
     </div>
